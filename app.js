@@ -172,7 +172,7 @@ function renderDocuments() {
       </h3>
       <div class="document-list">
         ${cat.files.map(file => `
-          <div class="document-item">
+          <div class="document-item ${file.file ? 'has-file' : 'no-file'}">
             <div class="document-icon ${file.type}">
               <span class="material-icons-outlined">${file.type === 'pdf' ? 'picture_as_pdf' : 'image'}</span>
             </div>
@@ -181,12 +181,18 @@ function renderDocuments() {
               <div class="document-desc">${file.description}</div>
             </div>
             <div class="document-actions">
-              <button class="doc-btn" title="View">
-                <span class="material-icons-outlined">visibility</span>
-              </button>
-              <button class="doc-btn" title="Download">
-                <span class="material-icons-outlined">download</span>
-              </button>
+              ${file.file ? `
+                <a href="${file.file}" target="_blank" class="doc-btn" title="View">
+                  <span class="material-icons-outlined">visibility</span>
+                </a>
+                <a href="${file.file}" download class="doc-btn" title="Download">
+                  <span class="material-icons-outlined">download</span>
+                </a>
+              ` : `
+                <span class="doc-btn disabled" title="Not uploaded">
+                  <span class="material-icons-outlined">hourglass_empty</span>
+                </span>
+              `}
             </div>
           </div>
         `).join('')}

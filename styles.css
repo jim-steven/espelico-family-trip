@@ -784,6 +784,28 @@ body {
   font-size: 1.1rem;
 }
 
+.doc-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.doc-btn.disabled:hover {
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+}
+
+.document-item.no-file {
+  opacity: 0.6;
+}
+
+.document-item.has-file {
+  border-left: 3px solid var(--color-accent);
+}
+
+a.doc-btn {
+  text-decoration: none;
+}
+
 /* Funds Section */
 .funds-statement {
   font-size: 1rem;

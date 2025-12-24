@@ -157,53 +157,54 @@
         "name": "Identity",
         "icon": "badge",
         "files": [
-          { "name": "Passport - Jim Steven Espelico", "type": "pdf", "description": "Valid Philippine passport" },
-          { "name": "Passport - Esmeralda Espelico", "type": "pdf", "description": "Valid Philippine passport" },
-          { "name": "Passport - Jose Deane Espelico", "type": "pdf", "description": "Valid Philippine passport" },
-          { "name": "eTravel QR - All Travelers", "type": "image", "description": "Philippine eTravel registration" }
+          { "name": "Passport - Jim Steven Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
+          { "name": "Passport - Esmeralda Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
+          { "name": "Passport - Jose Deane Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
+          { "name": "eTravel QR - All Travelers", "type": "image", "description": "Philippine eTravel registration", "file": null }
         ]
       },
       {
         "name": "Employment",
         "icon": "work",
         "files": [
-          { "name": "Certificate of Employment - Jim", "type": "pdf", "description": "Current employer certification" },
-          { "name": "Latest Payroll - Jim", "type": "pdf", "description": "Recent salary slip" }
+          { "name": "Certificate of Employment - Jim", "type": "pdf", "description": "Sourcegraph employer certification", "file": "docs/coe-jim.pdf" },
+          { "name": "Latest Payroll - Jim", "type": "pdf", "description": "Week of Dec 8-14, 2025", "file": "docs/payroll-jim.pdf" }
         ]
       },
       {
         "name": "Financial",
         "icon": "account_balance",
         "files": [
-          { "name": "Bank Statement", "type": "pdf", "description": "Recent 3-month statement" },
-          { "name": "Proof of Funds Note", "type": "pdf", "description": "Self-funded travel declaration" }
+          { "name": "MariBank Statement", "type": "pdf", "description": "Bank statement Dec 24, 2025", "file": "docs/bank-statement.pdf" },
+          { "name": "Proof of Funds - Screenshot 1", "type": "image", "description": "Account balance screenshot", "file": "docs/proof-of-funds-1.png" },
+          { "name": "Proof of Funds - Screenshot 2", "type": "image", "description": "Account balance screenshot", "file": "docs/proof-of-funds-2.png" }
         ]
       },
       {
         "name": "Business",
         "icon": "store",
         "files": [
-          { "name": "Barangay Business Permit", "type": "pdf", "description": "Deane's sari-sari store permit" },
-          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store" }
+          { "name": "Barangay Business Permit", "type": "image", "description": "Deane's sari-sari store permit", "file": "docs/business-permit-deane.jpg" },
+          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store", "file": null }
         ]
       },
       {
         "name": "Travel",
         "icon": "flight",
         "files": [
-          { "name": "Flight Booking KLWNKQ", "type": "pdf", "description": "Deane's flight confirmation" },
-          { "name": "Flight Booking HKGUPT", "type": "pdf", "description": "Jim & Esmeralda's flight confirmation" },
-          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking" },
-          { "name": "Garden Residency Confirmation", "type": "pdf", "description": "Hotel booking" },
-          { "name": "Itinerary PDF", "type": "pdf", "description": "Complete trip itinerary" }
+          { "name": "Flight Booking KLWNKQ", "type": "pdf", "description": "Deane's flight confirmation", "file": "docs/flight-klwnkq.pdf" },
+          { "name": "Flight Booking HKGUPT", "type": "pdf", "description": "Jim & Esmeralda's flight confirmation", "file": "docs/flight-hkgupt.pdf" },
+          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking", "file": null },
+          { "name": "Garden Residency Confirmation", "type": "pdf", "description": "Hotel booking", "file": null },
+          { "name": "Itinerary PDF", "type": "pdf", "description": "Complete trip itinerary", "file": null }
         ]
       },
       {
         "name": "Supporting Photos",
         "icon": "photo_library",
         "files": [
-          { "name": "School Christmas Party", "type": "image", "description": "Esmeralda at school event - ties to Philippines" },
-          { "name": "Sari-Sari Store Photo", "type": "image", "description": "Deane's business - ties to Philippines" }
+          { "name": "School Christmas Party", "type": "image", "description": "Esmeralda at school event - ties to Philippines", "file": null },
+          { "name": "Sari-Sari Store Photo", "type": "image", "description": "Deane's business - ties to Philippines", "file": null }
         ]
       }
     ]
