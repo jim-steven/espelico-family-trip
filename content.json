@@ -155,20 +155,20 @@
   "documents": {
     "categories": [
       {
-        "name": "Identity",
+        "name": "Identity & Travel Tax",
         "icon": "badge",
         "files": [
-          { "name": "Passport - Jim Steven Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
-          { "name": "Passport - Esmeralda Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
-          { "name": "Passport - Jose Deane Espelico", "type": "pdf", "description": "Valid Philippine passport", "file": null },
-          { "name": "eTravel QR - All Travelers", "type": "image", "description": "Philippine eTravel registration", "file": null }
+          { "name": "eTravel - Jim Steven Espelico", "type": "image", "description": "Ref: F00WEN9XJH6B • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-jim.png" },
+          { "name": "eTravel - Mom (Esmeralda Espelico)", "type": "image", "description": "Ref: F00LHRBLSCV4 • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-mom.png" },
+          { "name": "eTravel - Jose Deane Espelico", "type": "image", "description": "Ref: F00W68XIBQVH • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-deane.png" },
+          { "name": "Travel Tax Receipt", "type": "pdf", "description": "Philippine Travel Tax payment confirmation", "file": "docs/travel-tax.pdf" }
         ]
       },
       {
         "name": "Employment",
         "icon": "work",
         "files": [
-          { "name": "Certificate of Employment - Jim", "type": "pdf", "description": "Sourcegraph employer certification", "file": "docs/coe-jim.pdf" },
+          { "name": "Certificate of Employment - Jim", "type": "image", "description": "Oraz Philippines Inc. • Executive Partner • PHP 49,000/month", "file": "docs/coe-jim.png" },
           { "name": "Latest Payroll - Jim", "type": "pdf", "description": "Week of Dec 8-14, 2025", "file": "docs/payroll-jim.pdf" }
         ]
       },
@@ -283,7 +283,7 @@
     }
   ],
   "quickAnswers": {
-    "purpose": "Tourism",
+    "purpose": "Leisure",
     "lengthOfStay": "Temporary and Fixed",
     "accommodation": "Pre-booked",
     "funds": "Sufficient",
