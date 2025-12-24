@@ -139,18 +139,128 @@
     }
   ],
   "itinerary": [
-    { "date": "December 24, 2025", "day": 1, "title": "Departure Day", "location": "Manila → Ho Chi Minh City", "items": ["Check-in at NAIA Terminal 3", "Evening flight to Vietnam", "Arrive Ho Chi Minh City, check into Vinhomes apartment"] },
-    { "date": "December 25, 2025", "day": 2, "title": "Christmas in Saigon", "location": "Ho Chi Minh City", "items": ["Rest and settle in", "Explore local neighborhood", "Christmas dinner"] },
-    { "date": "December 26, 2025", "day": 3, "title": "City Exploration", "location": "Ho Chi Minh City", "items": ["Visit Ben Thanh Market", "Notre-Dame Cathedral Basilica", "Central Post Office"] },
-    { "date": "December 27, 2025", "day": 4, "title": "Cultural Day", "location": "Ho Chi Minh City", "items": ["War Remnants Museum", "Reunification Palace", "Local cuisine tour"] },
-    { "date": "December 28, 2025", "day": 5, "title": "Travel to Cambodia", "location": "Ho Chi Minh City → Phnom Penh", "items": ["Check out from Vinhomes", "Travel to Phnom Penh", "Check into The Garden Residency"] },
-    { "date": "December 29-30, 2025", "day": "6-7", "title": "Phnom Penh Exploration", "location": "Phnom Penh", "items": ["Royal Palace", "Silver Pagoda", "National Museum", "Riverside walks"] },
-    { "date": "December 31, 2025", "day": 8, "title": "New Year's Eve", "location": "Phnom Penh", "items": ["Check into Urban Village", "New Year's Eve celebration", "Countdown festivities"] },
-    { "date": "January 1, 2026", "day": 9, "title": "New Year's Day", "location": "Phnom Penh", "items": ["Late brunch", "Return to The Garden Residency", "Relaxation day"] },
-    { "date": "January 2-10, 2026", "day": "10-18", "title": "Extended Stay", "location": "Phnom Penh", "items": ["Visit family", "Local exploration", "Day trips", "Shopping and leisure"] },
-    { "date": "January 11, 2026", "day": 19, "title": "Jim & Esmeralda Return", "location": "Phnom Penh → Manila", "items": ["Jim and Esmeralda fly back to Manila", "Deane continues stay"] },
-    { "date": "January 12-21, 2026", "day": "20-29", "title": "Deane Extended Stay", "location": "Cambodia", "items": ["Continue family visit", "Extended exploration"] },
-    { "date": "January 22, 2026", "day": 30, "title": "Final Return", "location": "Ho Chi Minh City → Manila", "items": ["Deane returns to Manila", "Trip concludes"] }
+    { 
+      "date": "December 24, 2025", 
+      "day": 1, 
+      "title": "Departure Day", 
+      "location": "Manila → Ho Chi Minh City", 
+      "items": ["Check-in at NAIA Terminal 3", "9:55pm flight to Vietnam", "Arrive Ho Chi Minh City ~11:50pm"],
+      "meals": null
+    },
+    { 
+      "date": "December 25, 2025", 
+      "day": 2, 
+      "title": "Christmas in Saigon", 
+      "location": "Ho Chi Minh City", 
+      "items": ["1-4am: Airport to Airbnb", "Sleep until 10am", "10am-1pm: Brunch + stroll Vincom Center", "1-5pm: Book Street", "5:30-8pm: Dinner"],
+      "meals": {
+        "lunch": ["Singafood - Taste of Singapore", "OH CHICKEN", "Matsuri Japanese Restaurant", "KOI Thé Landmark"],
+        "dinner": ["Wrap&Roll mPlaza", "Diamond Plaza food court", "My Banh Mi (signature footlong)", "Haeduri Hai Bà Trưng (boneless chicken)", "Matsuya"]
+      }
+    },
+    { 
+      "date": "December 26, 2025", 
+      "day": 3, 
+      "title": "City Exploration", 
+      "location": "Ho Chi Minh City", 
+      "items": ["8am-1pm: Ben Thanh Market", "2-5pm: Bitexco Financial Tower", "5-9pm: Nguyen Hue Walking Street", "7-8pm: Dinner"],
+      "meals": {
+        "lunch": ["Ben Thanh Market food stalls", "Local phở shops", "Bánh mì stands"],
+        "dinner": ["Nguyen Hue area restaurants", "Rooftop dining options", "Street food"]
+      }
+    },
+    { 
+      "date": "December 27, 2025", 
+      "day": 4, 
+      "title": "Relaxation Day", 
+      "location": "Ho Chi Minh City", 
+      "items": ["7am-2pm: Downtime and rest", "5-11pm: Night tour (optional)"],
+      "meals": {
+        "lunch": ["Apartment area cafes", "Local restaurants"],
+        "dinner": ["Night market food", "Local Vietnamese cuisine"]
+      }
+    },
+    { 
+      "date": "December 28, 2025", 
+      "day": 5, 
+      "title": "Travel to Cambodia", 
+      "location": "Ho Chi Minh City → Phnom Penh", 
+      "items": ["Check out from Vinhomes", "Travel to Phnom Penh", "Check into The Garden Residency"],
+      "meals": {
+        "lunch": ["Travel snacks", "Border crossing area"],
+        "dinner": ["The Garden Residency area", "Local Cambodian food"]
+      }
+    },
+    { 
+      "date": "December 29-30, 2025", 
+      "day": "6-7", 
+      "title": "Phnom Penh Exploration", 
+      "location": "Phnom Penh", 
+      "items": ["Royal Palace", "Silver Pagoda", "National Museum", "Riverside walks"],
+      "meals": {
+        "lunch": ["Riverside restaurants", "Local Khmer cuisine"],
+        "dinner": ["Night market", "Family recommendations"]
+      }
+    },
+    { 
+      "date": "December 31, 2025", 
+      "day": 8, 
+      "title": "New Year's Eve", 
+      "location": "Phnom Penh", 
+      "items": ["Check into Urban Village", "New Year's Eve celebration", "Countdown festivities"],
+      "meals": {
+        "lunch": ["Urban Village area"],
+        "dinner": ["New Year's Eve special dinner", "Celebration venue"]
+      }
+    },
+    { 
+      "date": "January 1, 2026", 
+      "day": 9, 
+      "title": "New Year's Day", 
+      "location": "Phnom Penh", 
+      "items": ["Late brunch", "Return to The Garden Residency", "Relaxation day"],
+      "meals": {
+        "lunch": ["Late brunch spots"],
+        "dinner": ["Casual family dinner"]
+      }
+    },
+    { 
+      "date": "January 2-10, 2026", 
+      "day": "10-18", 
+      "title": "Extended Stay", 
+      "location": "Phnom Penh", 
+      "items": ["Visit family", "Local exploration", "Day trips", "Shopping and leisure"],
+      "meals": {
+        "lunch": ["Family home cooking", "Local favorites"],
+        "dinner": ["Family gatherings", "Local restaurants"]
+      }
+    },
+    { 
+      "date": "January 11, 2026", 
+      "day": 19, 
+      "title": "Return", 
+      "location": "Phnom Penh → Manila", 
+      "items": ["Return flight to Manila"],
+      "meals": null
+    },
+    { 
+      "date": "January 12-21, 2026", 
+      "day": "20-29", 
+      "title": "Deane Extended Stay", 
+      "location": "Cambodia", 
+      "items": ["Continue family visit", "Extended exploration"],
+      "disabled": true,
+      "meals": null
+    },
+    { 
+      "date": "January 22, 2026", 
+      "day": 30, 
+      "title": "Final Return", 
+      "location": "Ho Chi Minh City → Manila", 
+      "items": ["Deane returns to Manila", "Trip concludes"],
+      "disabled": true,
+      "meals": null
+    }
   ],
   "documents": {
     "categories": [

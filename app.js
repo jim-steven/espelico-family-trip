@@ -145,7 +145,7 @@ function renderItinerary() {
   if (!container) return;
   
   container.innerHTML = content.itinerary.map((day, index) => `
-    <div class="itinerary-day" onclick="openItineraryDetail(${index})">
+    <div class="itinerary-day ${day.disabled ? 'disabled-day' : ''}" ${!day.disabled ? `onclick="openItineraryDetail(${index})"` : ''}>
       <div class="itinerary-card">
         <div class="itinerary-date">Day ${day.day} • ${day.date}</div>
         <h3 class="itinerary-title">${day.title}</h3>
@@ -156,9 +156,38 @@ function renderItinerary() {
         <ul class="itinerary-items">
           ${day.items.map(item => `<li>${item}</li>`).join('')}
         </ul>
+        ${day.meals ? `
+          <div class="meal-dropdowns">
+            <div class="meal-dropdown">
+              <button class="meal-toggle" onclick="event.stopPropagation(); toggleMealDropdown(this)">
+                <span class="material-icons-outlined">restaurant</span>
+                Lunch Options
+                <span class="material-icons-outlined arrow">expand_more</span>
+              </button>
+              <ul class="meal-options">
+                ${day.meals.lunch.map(m => `<li>${m}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="meal-dropdown">
+              <button class="meal-toggle" onclick="event.stopPropagation(); toggleMealDropdown(this)">
+                <span class="material-icons-outlined">dinner_dining</span>
+                Dinner Options
+                <span class="material-icons-outlined arrow">expand_more</span>
+              </button>
+              <ul class="meal-options">
+                ${day.meals.dinner.map(m => `<li>${m}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        ` : ''}
       </div>
     </div>
   `).join('');
+}
+
+function toggleMealDropdown(btn) {
+  const dropdown = btn.parentElement;
+  dropdown.classList.toggle('open');
 }
 
 function renderDocuments() {
