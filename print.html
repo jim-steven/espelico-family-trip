@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espelico Family Trip - Print Version</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #2c5282;
+      --color-accent: #38a169;
+      --color-text: #1a202c;
+      --color-text-secondary: #4a5568;
+      --color-text-muted: #718096;
+      --color-border: #e2e8f0;
+      --color-bg: #f7f8fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: var(--color-text);
+      background: white;
+      padding: 0.5in;
+    }
+
+    .page {
+      page-break-after: always;
+      margin-bottom: 1rem;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--color-primary);
+    }
+
+    .header h1 {
+      font-size: 18pt;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .header .subtitle {
+      font-size: 11pt;
+      color: var(--color-text-secondary);
+    }
+
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .info-box {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .info-value {
+      font-size: 10pt;
+      font-weight: 500;
+    }
+
+    .travelers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .traveler {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem;
+      background: var(--color-bg);
+      border-radius: 4px;
+    }
+
+    .traveler-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .traveler-name {
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .traveler-role {
+      font-size: 9pt;
+      color: var(--color-text-muted);
+    }
+
+    .quick-answers {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .quick-item {
+      text-align: center;
+      padding: 0.5rem;
+      background: #e6fffa;
+      border-radius: 4px;
+    }
+
+    .quick-item .label {
+      font-size: 7pt;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      display: block;
+    }
+
+    .quick-item .value {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    .booking-card {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    .booking-header {
+      background: var(--color-primary);
+      color: white;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .booking-ref {
+      font-size: 8pt;
+    }
+
+    .booking-ref strong {
+      font-size: 11pt;
+      display: block;
+    }
+
+    .booking-status {
+      font-size: 9pt;
+      background: rgba(255,255,255,0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+    }
+
+    .booking-passengers {
+      padding: 0.5rem 0.75rem;
+      background: var(--color-bg);
+      font-size: 9pt;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .flight-segment {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .flight-segment:last-child {
+      border-bottom: none;
+    }
+
+    .segment-type {
+      display: inline-block;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      background: #ebf8ff;
+      color: #3182ce;
+    }
+
+    .segment-type.return {
+      background: #faf5ff;
+      color: #805ad5;
+    }
+
+    .flight-route {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .flight-point {
+      flex: 1;
+    }
+
+    .flight-point.arrival {
+      text-align: right;
+    }
+
+    .flight-time {
+      font-size: 14pt;
+      font-weight: 700;
+    }
+
+    .flight-city {
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+    }
+
+    .flight-terminal {
+      font-size: 8pt;
+      color: var(--color-text-muted);
+    }
+
+    .flight-arrow {
+      text-align: center;
+      color: var(--color-text-muted);
+    }
+
+    .flight-number {
+      font-size: 8pt;
+      font-weight: 500;
+    }
+
+    .flight-date {
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+    }
+
+    .accommodation-card {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .accommodation-country {
+      display: inline-block;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      background: #fed7d7;
+      color: #c53030;
+    }
+
+    .accommodation-country.cambodia {
+      background: #c6f6d5;
+      color: #276749;
+    }
+
+    .accommodation-name {
+      font-size: 11pt;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .accommodation-address {
+      font-size: 9pt;
+      color: var(--color-text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .accommodation-details {
+      display: flex;
+      gap: 1rem;
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+    }
+
+    .itinerary-day {
+      margin-bottom: 0.75rem;
+      padding: 0.5rem;
+      background: var(--color-bg);
+      border-radius: 4px;
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .itinerary-date {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .itinerary-title {
+      font-size: 10pt;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .itinerary-location {
+      font-size: 9pt;
+      color: var(--color-text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .itinerary-items {
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+      padding-left: 1rem;
+    }
+
+    .itinerary-items li {
+      margin-bottom: 0.15rem;
+    }
+
+    .employment-card {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .employment-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .employment-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .employment-name {
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .employment-status {
+      display: inline-block;
+      font-size: 8pt;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      background: #c6f6d5;
+      color: #276749;
+      font-weight: 500;
+    }
+
+    .employment-desc {
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+    }
+
+    .faq-item {
+      margin-bottom: 0.75rem;
+      padding: 0.5rem;
+      background: var(--color-bg);
+      border-radius: 4px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 10pt;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-answer {
+      font-size: 9pt;
+      color: var(--color-text-secondary);
+    }
+
+    .return-box {
+      background: #ebf8ff;
+      border: 1px solid #90cdf4;
+      border-radius: 6px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .return-statement {
+      font-size: 10pt;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .return-flight {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 9pt;
+      padding: 0.35rem 0;
+    }
+
+    .ties-list {
+      font-size: 9pt;
+      padding-left: 1rem;
+      color: var(--color-text-secondary);
+    }
+
+    .ties-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 9pt;
+      color: var(--color-text-muted);
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+      
+      .page {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <h1>Espelico Family Trip</h1>
+      <p class="subtitle">Vietnam & Cambodia | December 24, 2025 - January 22, 2026</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Trip Overview</h2>
+      <div class="info-box">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Purpose</span>
+            <span class="info-value">Tourism & Family Vacation</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Destinations</span>
+            <span class="info-value">Vietnam, Cambodia</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Departure</span>
+            <span class="info-value">December 24, 2025</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Final Return</span>
+            <span class="info-value">January 22, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Travelers</h2>
+      <div class="travelers-list" id="travelers-list"></div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Immigration Quick Summary</h2>
+      <div class="quick-answers">
+        <div class="quick-item">
+          <span class="label">Purpose</span>
+          <span class="value">Tourism</span>
+        </div>
+        <div class="quick-item">
+          <span class="label">Stay</span>
+          <span class="value">Temporary</span>
+        </div>
+        <div class="quick-item">
+          <span class="label">Accommodation</span>
+          <span class="value">Pre-booked</span>
+        </div>
+        <div class="quick-item">
+          <span class="label">Funds</span>
+          <span class="value">Sufficient</span>
+        </div>
+        <div class="quick-item">
+          <span class="label">Return</span>
+          <span class="value">Confirmed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">Flight Bookings</h2>
+      <div id="flights-container"></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">Accommodations</h2>
+      <div id="accommodations-container"></div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Return Assurance</h2>
+      <div class="return-box">
+        <p class="return-statement">All travelers have confirmed return flights to the Philippines.</p>
+        <div id="return-flights"></div>
+      </div>
+      <h3 style="font-size: 10pt; margin-bottom: 0.5rem;">Ties to the Philippines</h3>
+      <ul class="ties-list" id="ties-list"></ul>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">Trip Itinerary</h2>
+      <div id="itinerary-container"></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">Employment & Ties to the Philippines</h2>
+      <div id="employment-container"></div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div id="faq-container"></div>
+    </div>
+
+    <div class="footer">
+      <p>Espelico Family Travel Documents</p>
+      <p>For Philippine immigration and airline verification purposes</p>
+    </div>
+  </div>
+
+  <script>
+    let content = null;
+
+    async function init() {
+      try {
+        const response = await fetch('content.json');
+        content = await response.json();
+        renderAll();
+      } catch (error) {
+        console.error('Failed to load content:', error);
+      }
+    }
+
+    function getInitials(name) {
+      return name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+    }
+
+    function renderAll() {
+      document.getElementById('travelers-list').innerHTML = content.travelers.map(t => `
+        <div class="traveler">
+          <div class="traveler-avatar">${getInitials(t.name)}</div>
+          <div>
+            <div class="traveler-name">${t.name}</div>
+            <div class="traveler-role">${t.role} • ${t.employment}</div>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('flights-container').innerHTML = content.flights.bookings.map(booking => `
+        <div class="booking-card">
+          <div class="booking-header">
+            <div class="booking-ref">
+              Booking Reference
+              <strong>${booking.reference}</strong>
+            </div>
+            <div class="booking-status">✓ ${booking.status}</div>
+          </div>
+          <div class="booking-passengers">
+            Passengers: ${booking.passengers.join(', ')}
+          </div>
+          ${booking.segments.map(seg => `
+            <div class="flight-segment">
+              <span class="segment-type ${seg.type}">${seg.type === 'outbound' ? 'Outbound' : 'Return'}</span>
+              <div class="flight-route">
+                <div class="flight-point">
+                  <div class="flight-time">${seg.departure}</div>
+                  <div class="flight-city">${seg.from.code} - ${seg.from.name}</div>
+                  <div class="flight-terminal">${seg.from.terminal}</div>
+                </div>
+                <div class="flight-arrow">
+                  <div class="flight-number">${seg.flightNumber}</div>
+                  <div>→</div>
+                  <div class="flight-number">${seg.airline}</div>
+                </div>
+                <div class="flight-point arrival">
+                  <div class="flight-time">${seg.arrival}</div>
+                  <div class="flight-city">${seg.to.code} - ${seg.to.name}</div>
+                  <div class="flight-terminal">${seg.to.terminal}</div>
+                </div>
+              </div>
+              <div class="flight-date">📅 ${seg.date}</div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+
+      document.getElementById('accommodations-container').innerHTML = content.accommodations.map(acc => `
+        <div class="accommodation-card">
+          <span class="accommodation-country ${acc.country.toLowerCase()}">${acc.country}</span>
+          <div class="accommodation-name">${acc.name}</div>
+          <div class="accommodation-address">📍 ${acc.address}</div>
+          <div class="accommodation-details">
+            <span>Check-in: ${acc.checkIn}</span>
+            <span>Check-out: ${acc.checkOut}</span>
+            ${acc.confirmationCode ? `<span>Code: ${acc.confirmationCode}</span>` : ''}
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('itinerary-container').innerHTML = content.itinerary.map(day => `
+        <div class="itinerary-day">
+          <div class="itinerary-date">Day ${day.day} • ${day.date}</div>
+          <div class="itinerary-title">${day.title}</div>
+          <div class="itinerary-location">📍 ${day.location}</div>
+          <ul class="itinerary-items">
+            ${day.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      document.getElementById('employment-container').innerHTML = content.employment.map(emp => `
+        <div class="employment-card">
+          <div class="employment-header">
+            <div class="employment-avatar">${getInitials(emp.traveler)}</div>
+            <div>
+              <div class="employment-name">${emp.traveler}</div>
+              <span class="employment-status">${emp.status}</span>
+            </div>
+          </div>
+          <div class="employment-desc">${emp.description}</div>
+        </div>
+      `).join('');
+
+      document.getElementById('return-flights').innerHTML = content.returnAssurance.returnFlights.map(rf => `
+        <div class="return-flight">
+          <span>✓</span>
+          <span><strong>${rf.traveler}</strong> - ${rf.date} (${rf.flight})</span>
+        </div>
+      `).join('');
+
+      document.getElementById('ties-list').innerHTML = content.returnAssurance.ties.map(tie => `
+        <li>${tie}</li>
+      `).join('');
+
+      document.getElementById('faq-container').innerHTML = content.faq.map(item => `
+        <div class="faq-item">
+          <div class="faq-question">Q: ${item.question}</div>
+          <div class="faq-answer">A: ${item.answer}</div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

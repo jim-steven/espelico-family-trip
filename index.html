@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espelico Family Travel Documents - Vietnam & Cambodia 2025-2026">
+  <meta name="theme-color" content="#2c5282">
+  <title>Espelico Family Trip | Vietnam & Cambodia</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="material-icons-outlined">flight_takeoff</span>
+        <span class="logo-text">Family Travel</span>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="material-icons-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <div class="nav-scroll">
+      <a href="#home" class="nav-item active" data-section="home">
+        <span class="material-icons-outlined">home</span>
+        <span>Home</span>
+      </a>
+      <a href="#flights" class="nav-item" data-section="flights">
+        <span class="material-icons-outlined">flight</span>
+        <span>Flights</span>
+      </a>
+      <a href="#accommodations" class="nav-item" data-section="accommodations">
+        <span class="material-icons-outlined">hotel</span>
+        <span>Stays</span>
+      </a>
+      <a href="#itinerary" class="nav-item" data-section="itinerary">
+        <span class="material-icons-outlined">event_note</span>
+        <span>Itinerary</span>
+      </a>
+      <a href="#documents" class="nav-item" data-section="documents">
+        <span class="material-icons-outlined">folder</span>
+        <span>Documents</span>
+      </a>
+      <a href="#employment" class="nav-item" data-section="employment">
+        <span class="material-icons-outlined">work</span>
+        <span>Employment</span>
+      </a>
+      <a href="#faq" class="nav-item" data-section="faq">
+        <span class="material-icons-outlined">help_outline</span>
+        <span>FAQ</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="section-header">
+        <h1>Espelico Family Trip</h1>
+        <p class="subtitle">Vietnam & Cambodia 2025-2026</p>
+      </div>
+
+      <div class="info-banner">
+        <span class="material-icons-outlined">verified</span>
+        <p>This page compiles travel documents for Philippine immigration and airline verification.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">
+          <span class="material-icons-outlined">info</span>
+          Trip Overview
+        </h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Purpose</span>
+            <span class="value">Tourism & Family Vacation</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Destinations</span>
+            <span class="value">Vietnam, Cambodia</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Departure</span>
+            <span class="value">December 24, 2025</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Final Return</span>
+            <span class="value">January 22, 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">
+          <span class="material-icons-outlined">group</span>
+          Travelers
+        </h2>
+        <div class="travelers-list" id="travelers-list"></div>
+      </div>
+
+      <div class="card highlight-card">
+        <h2 class="card-title">
+          <span class="material-icons-outlined">check_circle</span>
+          Quick Immigration Summary
+        </h2>
+        <div class="quick-answers" id="quick-answers"></div>
+      </div>
+    </section>
+
+    <!-- Flights Section -->
+    <section id="flights" class="section">
+      <div class="section-header">
+        <h1>Flight Bookings</h1>
+        <p class="subtitle">Confirmed reservations with Cebu Pacific</p>
+      </div>
+      <div id="flights-container"></div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section id="accommodations" class="section">
+      <div class="section-header">
+        <h1>Accommodations</h1>
+        <p class="subtitle">Pre-booked stays in Vietnam and Cambodia</p>
+      </div>
+      <div id="accommodations-container"></div>
+    </section>
+
+    <!-- Itinerary Section -->
+    <section id="itinerary" class="section">
+      <div class="section-header">
+        <h1>Trip Itinerary</h1>
+        <p class="subtitle">Day-by-day travel plan</p>
+      </div>
+      <div class="itinerary-timeline" id="itinerary-container"></div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="section">
+      <div class="section-header">
+        <h1>Documents Vault</h1>
+        <p class="subtitle">All travel documents organized by category</p>
+      </div>
+      <div id="documents-container"></div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <h2 class="card-title">
+          <span class="material-icons-outlined">account_balance</span>
+          Proof of Funds
+        </h2>
+        <p class="funds-statement" id="funds-statement"></p>
+        <div class="funds-note" id="funds-note"></div>
+      </div>
+    </section>
+
+    <!-- Employment Section -->
+    <section id="employment" class="section">
+      <div class="section-header">
+        <h1>Employment & Ties</h1>
+        <p class="subtitle">Proof of ties to the Philippines</p>
+      </div>
+      <div id="employment-container"></div>
+
+      <div class="card">
+        <h2 class="card-title">
+          <span class="material-icons-outlined">assignment_return</span>
+          Return Assurance
+        </h2>
+        <p class="return-statement" id="return-statement"></p>
+        <div class="return-flights" id="return-flights"></div>
+        <h3 class="ties-title">Ties to the Philippines</h3>
+        <ul class="ties-list" id="ties-list"></ul>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+      <div class="section-header">
+        <h1>Frequently Asked Questions</h1>
+        <p class="subtitle">Immigration-ready answers</p>
+      </div>
+      <div class="faq-list" id="faq-container"></div>
+    </section>
+  </main>
+
+  <!-- Detail Panel (Google-style card) -->
+  <div class="detail-overlay" id="detail-overlay"></div>
+  <aside class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <button class="detail-close" id="detail-close">
+        <span class="material-icons-outlined">close</span>
+      </button>
+    </div>
+    <div class="detail-hero" id="detail-hero"></div>
+    <div class="detail-content" id="detail-content"></div>
+  </aside>
+
+  <footer class="footer">
+    <p>Espelico Family Travel Documents</p>
+    <p class="footer-note">For immigration and airline verification purposes</p>
+    <button class="print-btn" onclick="window.open('print.html', '_blank')">
+      <span class="material-icons-outlined">print</span>
+      Print All Documents
+    </button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

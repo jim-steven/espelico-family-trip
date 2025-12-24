@@ -1,0 +1,290 @@
+{
+  "trip": {
+    "title": "Espelico Family Trip to Vietnam & Cambodia",
+    "purpose": "Tourism and Family Vacation",
+    "countries": ["Vietnam", "Cambodia"],
+    "departure": "Philippines",
+    "dates": {
+      "outbound": "December 24, 2025",
+      "return": "January 22, 2026"
+    },
+    "note": "This page compiles travel documents for immigration and airline verification."
+  },
+  "travelers": [
+    {
+      "id": "jim",
+      "name": "Jim Steven Espelico",
+      "role": "Primary Contact",
+      "employment": "Employed in the Philippines",
+      "documents": ["passport", "coe", "payroll", "etravel"]
+    },
+    {
+      "id": "esmeralda",
+      "name": "Esmeralda Espelico",
+      "role": "Traveler",
+      "employment": "Staff and Teacher in the Philippines",
+      "documents": ["passport", "school-photo", "etravel"]
+    },
+    {
+      "id": "deane",
+      "name": "Jose Deane Espelico",
+      "role": "Traveler",
+      "employment": "Business Owner - Mini Sari-Sari Store",
+      "documents": ["passport", "barangay-permit", "store-photo", "etravel"]
+    }
+  ],
+  "flights": {
+    "bookings": [
+      {
+        "reference": "KLWNKQ",
+        "passengers": ["Jose Deane Espelico"],
+        "segments": [
+          {
+            "type": "outbound",
+            "flightNumber": "5J751",
+            "airline": "Cebu Pacific",
+            "from": { "code": "MNL", "name": "Manila", "terminal": "NAIA Terminal 3" },
+            "to": { "code": "SGN", "name": "Ho Chi Minh City", "terminal": "Terminal 2" },
+            "date": "December 24, 2025",
+            "departure": "21:55",
+            "arrival": "23:50"
+          },
+          {
+            "type": "return",
+            "flightNumber": "5J752",
+            "airline": "Cebu Pacific",
+            "from": { "code": "SGN", "name": "Ho Chi Minh City", "terminal": "Terminal 2" },
+            "to": { "code": "MNL", "name": "Manila", "terminal": "NAIA Terminal 3" },
+            "date": "January 22, 2026",
+            "departure": "00:35",
+            "arrival": "04:30"
+          }
+        ],
+        "status": "Confirmed and Paid"
+      },
+      {
+        "reference": "HKGUPT",
+        "passengers": ["Jim Steven Espelico", "Esmeralda Espelico"],
+        "segments": [
+          {
+            "type": "outbound",
+            "flightNumber": "5J751",
+            "airline": "Cebu Pacific",
+            "from": { "code": "MNL", "name": "Manila", "terminal": "NAIA Terminal 3" },
+            "to": { "code": "SGN", "name": "Ho Chi Minh City", "terminal": "Terminal 2" },
+            "date": "December 24, 2025",
+            "departure": "21:55",
+            "arrival": "23:50"
+          },
+          {
+            "type": "return",
+            "flightNumber": "5J752",
+            "airline": "Cebu Pacific",
+            "from": { "code": "SGN", "name": "Ho Chi Minh City", "terminal": "Terminal 2" },
+            "to": { "code": "MNL", "name": "Manila", "terminal": "NAIA Terminal 3" },
+            "date": "January 11, 2026",
+            "departure": "00:35",
+            "arrival": "04:30"
+          }
+        ],
+        "status": "Confirmed and Paid"
+      }
+    ]
+  },
+  "accommodations": [
+    {
+      "id": "vinhomes",
+      "name": "Vinhomes Central Park Apartment",
+      "type": "Apartment",
+      "country": "Vietnam",
+      "city": "Ho Chi Minh City",
+      "address": "Landmark 5, 720A Điện Biên Phủ, Bình Thạnh, Ho Chi Minh City, Vietnam",
+      "host": "Trúc",
+      "checkIn": "December 24, 2025",
+      "checkOut": "December 28, 2025",
+      "guests": 5,
+      "confirmationCode": "HMEY4XH294",
+      "platform": "Airbnb",
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600",
+      "mapUrl": "https://maps.google.com/?q=Vinhomes+Central+Park+Ho+Chi+Minh"
+    },
+    {
+      "id": "garden-residency",
+      "name": "The Garden Residency",
+      "type": "Hotel",
+      "country": "Cambodia",
+      "city": "Phnom Penh",
+      "address": "D15 Street 1984, Phnom Penh 120801, Cambodia",
+      "phone": "+855 15 566 667",
+      "hours": "24 hours",
+      "checkIn": "December 28, 2025",
+      "checkOut": "January 10, 2026",
+      "notes": "Primary stay in Cambodia",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
+      "mapUrl": "https://maps.google.com/?q=The+Garden+Residency+Phnom+Penh"
+    },
+    {
+      "id": "urban-village",
+      "name": "Urban Village",
+      "type": "Hotel",
+      "country": "Cambodia",
+      "city": "Phnom Penh",
+      "address": "Phnom Penh, Cambodia",
+      "checkIn": "December 31, 2025",
+      "checkOut": "January 1, 2026",
+      "notes": "One night stay for New Year's Eve",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600",
+      "mapUrl": "https://maps.google.com/?q=Urban+Village+Phnom+Penh"
+    }
+  ],
+  "itinerary": [
+    { "date": "December 24, 2025", "day": 1, "title": "Departure Day", "location": "Manila → Ho Chi Minh City", "items": ["Check-in at NAIA Terminal 3", "Evening flight to Vietnam", "Arrive Ho Chi Minh City, check into Vinhomes apartment"] },
+    { "date": "December 25, 2025", "day": 2, "title": "Christmas in Saigon", "location": "Ho Chi Minh City", "items": ["Rest and settle in", "Explore local neighborhood", "Christmas dinner"] },
+    { "date": "December 26, 2025", "day": 3, "title": "City Exploration", "location": "Ho Chi Minh City", "items": ["Visit Ben Thanh Market", "Notre-Dame Cathedral Basilica", "Central Post Office"] },
+    { "date": "December 27, 2025", "day": 4, "title": "Cultural Day", "location": "Ho Chi Minh City", "items": ["War Remnants Museum", "Reunification Palace", "Local cuisine tour"] },
+    { "date": "December 28, 2025", "day": 5, "title": "Travel to Cambodia", "location": "Ho Chi Minh City → Phnom Penh", "items": ["Check out from Vinhomes", "Travel to Phnom Penh", "Check into The Garden Residency"] },
+    { "date": "December 29-30, 2025", "day": "6-7", "title": "Phnom Penh Exploration", "location": "Phnom Penh", "items": ["Royal Palace", "Silver Pagoda", "National Museum", "Riverside walks"] },
+    { "date": "December 31, 2025", "day": 8, "title": "New Year's Eve", "location": "Phnom Penh", "items": ["Check into Urban Village", "New Year's Eve celebration", "Countdown festivities"] },
+    { "date": "January 1, 2026", "day": 9, "title": "New Year's Day", "location": "Phnom Penh", "items": ["Late brunch", "Return to The Garden Residency", "Relaxation day"] },
+    { "date": "January 2-10, 2026", "day": "10-18", "title": "Extended Stay", "location": "Phnom Penh", "items": ["Visit family", "Local exploration", "Day trips", "Shopping and leisure"] },
+    { "date": "January 11, 2026", "day": 19, "title": "Jim & Esmeralda Return", "location": "Phnom Penh → Manila", "items": ["Jim and Esmeralda fly back to Manila", "Deane continues stay"] },
+    { "date": "January 12-21, 2026", "day": "20-29", "title": "Deane Extended Stay", "location": "Cambodia", "items": ["Continue family visit", "Extended exploration"] },
+    { "date": "January 22, 2026", "day": 30, "title": "Final Return", "location": "Ho Chi Minh City → Manila", "items": ["Deane returns to Manila", "Trip concludes"] }
+  ],
+  "documents": {
+    "categories": [
+      {
+        "name": "Identity",
+        "icon": "badge",
+        "files": [
+          { "name": "Passport - Jim Steven Espelico", "type": "pdf", "description": "Valid Philippine passport" },
+          { "name": "Passport - Esmeralda Espelico", "type": "pdf", "description": "Valid Philippine passport" },
+          { "name": "Passport - Jose Deane Espelico", "type": "pdf", "description": "Valid Philippine passport" },
+          { "name": "eTravel QR - All Travelers", "type": "image", "description": "Philippine eTravel registration" }
+        ]
+      },
+      {
+        "name": "Employment",
+        "icon": "work",
+        "files": [
+          { "name": "Certificate of Employment - Jim", "type": "pdf", "description": "Current employer certification" },
+          { "name": "Latest Payroll - Jim", "type": "pdf", "description": "Recent salary slip" }
+        ]
+      },
+      {
+        "name": "Financial",
+        "icon": "account_balance",
+        "files": [
+          { "name": "Bank Statement", "type": "pdf", "description": "Recent 3-month statement" },
+          { "name": "Proof of Funds Note", "type": "pdf", "description": "Self-funded travel declaration" }
+        ]
+      },
+      {
+        "name": "Business",
+        "icon": "store",
+        "files": [
+          { "name": "Barangay Business Permit", "type": "pdf", "description": "Deane's sari-sari store permit" },
+          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store" }
+        ]
+      },
+      {
+        "name": "Travel",
+        "icon": "flight",
+        "files": [
+          { "name": "Flight Booking KLWNKQ", "type": "pdf", "description": "Deane's flight confirmation" },
+          { "name": "Flight Booking HKGUPT", "type": "pdf", "description": "Jim & Esmeralda's flight confirmation" },
+          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking" },
+          { "name": "Garden Residency Confirmation", "type": "pdf", "description": "Hotel booking" },
+          { "name": "Itinerary PDF", "type": "pdf", "description": "Complete trip itinerary" }
+        ]
+      },
+      {
+        "name": "Supporting Photos",
+        "icon": "photo_library",
+        "files": [
+          { "name": "School Christmas Party", "type": "image", "description": "Esmeralda at school event - ties to Philippines" },
+          { "name": "Sari-Sari Store Photo", "type": "image", "description": "Deane's business - ties to Philippines" }
+        ]
+      }
+    ]
+  },
+  "employment": [
+    {
+      "traveler": "Jim Steven Espelico",
+      "status": "Employed",
+      "description": "Currently employed in the Philippines",
+      "documents": ["Certificate of Employment", "Latest Payroll"],
+      "notes": "Approved leave dates for travel period"
+    },
+    {
+      "traveler": "Esmeralda Espelico",
+      "status": "Employed",
+      "description": "Staff and Teacher in the Philippines",
+      "documents": ["School Christmas Party Photo"],
+      "notes": "Recent photo from school Christmas party demonstrates active employment and ties to the Philippines"
+    },
+    {
+      "traveler": "Jose Deane Espelico",
+      "status": "Business Owner",
+      "description": "Owns a mini sari-sari store in the Philippines",
+      "documents": ["Barangay Business Permit", "Store Photo"],
+      "notes": "Active local business requiring return to Philippines"
+    }
+  ],
+  "proofOfFunds": {
+    "statement": "All travel expenses are self-funded by the travelers.",
+    "evidence": ["Bank statements showing sufficient funds", "Proof of regular income"],
+    "note": "Funds are sufficient for the entire duration of travel including accommodations, transportation, food, and contingencies."
+  },
+  "returnAssurance": {
+    "statement": "All travelers have confirmed return flights to the Philippines.",
+    "returnFlights": [
+      { "traveler": "Jim Steven Espelico", "date": "January 11, 2026", "flight": "5J752" },
+      { "traveler": "Esmeralda Espelico", "date": "January 11, 2026", "flight": "5J752" },
+      { "traveler": "Jose Deane Espelico", "date": "January 22, 2026", "flight": "5J752" }
+    ],
+    "ties": [
+      "Active employment in the Philippines",
+      "Business ownership requiring management",
+      "Family and home in the Philippines",
+      "No intent to work or overstay abroad"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What is the purpose of your trip?",
+      "answer": "Tourism and family vacation in Vietnam and Cambodia."
+    },
+    {
+      "question": "How long will you be staying?",
+      "answer": "Jim and Esmeralda: December 24, 2025 to January 11, 2026 (18 days). Jose Deane: December 24, 2025 to January 22, 2026 (29 days)."
+    },
+    {
+      "question": "Where will you be staying?",
+      "answer": "Pre-booked accommodations: Vinhomes Central Park Apartment in Ho Chi Minh City, The Garden Residency and Urban Village in Phnom Penh."
+    },
+    {
+      "question": "Do you have return tickets?",
+      "answer": "Yes, all travelers have confirmed return flights to Manila."
+    },
+    {
+      "question": "How is this trip funded?",
+      "answer": "Self-funded with sufficient personal savings and regular employment income."
+    },
+    {
+      "question": "Do you have relatives in Cambodia? What do they do?",
+      "answer": "Yes, a sister and brother are based in Cambodia. They work at SIA Cambodia. Reference: https://www.siacambodia.com/staff"
+    },
+    {
+      "question": "What ties do you have to the Philippines?",
+      "answer": "Active employment, business ownership (sari-sari store), family home, and no intent to work or relocate abroad."
+    }
+  ],
+  "quickAnswers": {
+    "purpose": "Tourism",
+    "lengthOfStay": "Temporary and Fixed",
+    "accommodation": "Pre-booked",
+    "funds": "Sufficient",
+    "returnTicket": "Confirmed"
+  }
+}
