@@ -182,8 +182,13 @@ function renderItinerary() {
   const container = document.getElementById('itinerary-container');
   if (!container) return;
   
-  container.innerHTML = content.itinerary.map((day, index) => `
-    <div class="itinerary-day ${day.disabled ? 'disabled-day' : ''}" ${!day.disabled ? `onclick="openItineraryDetail(${index})"` : ''}>
+  const activeDays = content.itinerary.filter(day => !day.disabled);
+  const disabledDays = content.itinerary.filter(day => day.disabled);
+  
+  const activeDaysHtml = activeDays.map((day) => {
+    const originalIndex = content.itinerary.indexOf(day);
+    return `
+    <div class="itinerary-day" onclick="openItineraryDetail(${originalIndex})">
       <div class="itinerary-card">
         <div class="itinerary-date">Day ${day.day} • ${day.date}</div>
         <h3 class="itinerary-title">${day.title}</h3>
@@ -220,7 +225,37 @@ function renderItinerary() {
         ` : ''}
       </div>
     </div>
-  `).join('');
+  `}).join('');
+  
+  const disabledSectionHtml = disabledDays.length > 0 ? `
+    <div class="disabled-section-dropdown">
+      <button class="disabled-section-toggle" onclick="toggleDisabledSection(this)">
+        <span class="material-icons-outlined">schedule</span>
+        <span class="toggle-text">Deane's Extended Stay (Day 20-30)</span>
+        <span class="material-icons-outlined arrow">expand_more</span>
+      </button>
+      <div class="disabled-section-content">
+        ${disabledDays.map(day => `
+          <div class="disabled-day-item">
+            <div class="disabled-day-date">Day ${day.day} • ${day.date}</div>
+            <div class="disabled-day-title">${day.title}</div>
+            <div class="disabled-day-location">
+              <span class="material-icons-outlined">location_on</span>
+              ${day.location}
+            </div>
+            <div class="disabled-day-items">${day.items.join(' • ')}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+  
+  container.innerHTML = activeDaysHtml + disabledSectionHtml;
+}
+
+function toggleDisabledSection(btn) {
+  const section = btn.parentElement;
+  section.classList.toggle('open');
 }
 
 function toggleMealDropdown(btn) {
