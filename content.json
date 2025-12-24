@@ -19,7 +19,7 @@
     },
     {
       "id": "mom",
-      "name": "Mom (Esmeralda Espelico)",
+      "name": "Esmeralda Espelico",
       "role": "Traveler",
       "employment": "Staff and Teacher in the Philippines",
       "documents": ["passport", "school-photo", "etravel"]
@@ -63,7 +63,7 @@
       },
       {
         "reference": "HKGUPT",
-        "passengers": ["Jim Steven Espelico", "Mom (Esmeralda Espelico)"],
+        "passengers": ["Jim Steven Espelico", "Esmeralda Espelico"],
         "returnNote": "Returning Jan 11 due to work obligations - Jim's agency did not approve 3-week leave, and Mom must return for school duties week of Jan 12",
         "segments": [
           {
@@ -268,7 +268,7 @@
         "icon": "badge",
         "files": [
           { "name": "eTravel - Jim Steven Espelico", "type": "image", "description": "Ref: F00WEN9XJH6B • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-jim.png" },
-          { "name": "eTravel - Mom (Esmeralda Espelico)", "type": "image", "description": "Ref: F00LHRBLSCV4 • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-mom.png" },
+          { "name": "eTravel - Esmeralda Espelico", "type": "image", "description": "Ref: F00LHRBLSCV4 • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-mom.png" },
           { "name": "eTravel - Jose Deane Espelico", "type": "image", "description": "Ref: F00W68XIBQVH • Dec 24, 2025 • MNL → Vietnam", "file": "docs/etravel-deane.png" },
           { "name": "Travel Tax Receipt", "type": "pdf", "description": "Philippine Travel Tax payment confirmation", "file": "docs/travel-tax.pdf" }
         ]
@@ -328,7 +328,7 @@
       "notes": "Approved leave dates for travel period"
     },
     {
-      "traveler": "Mom (Esmeralda Espelico)",
+      "traveler": "Esmeralda Espelico",
       "status": "Employed",
       "description": "Staff and Teacher in the Philippines",
       "documents": ["School Christmas Party Photo"],
@@ -351,7 +351,7 @@
     "statement": "All travelers have confirmed return flights to the Philippines.",
     "returnFlights": [
       { "traveler": "Jim Steven Espelico", "date": "January 11, 2026", "flight": "5J752", "reason": "Agency did not approve 3-week leave" },
-      { "traveler": "Mom (Esmeralda Espelico)", "date": "January 11, 2026", "flight": "5J752", "reason": "Must return for school duties" },
+      { "traveler": "Esmeralda Espelico", "date": "January 11, 2026", "flight": "5J752", "reason": "Must return for school duties" },
       { "traveler": "Jose Deane Espelico", "date": "January 22, 2026", "flight": "5J752" }
     ],
     "ties": [

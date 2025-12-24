@@ -14,12 +14,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="offline-indicator" id="offline-indicator">
-    <span class="material-icons-outlined">cloud_off</span>
-    Offline Mode
+  <!-- Password Lock Screen -->
+  <div class="lock-screen" id="lock-screen">
+    <div class="lock-container">
+      <div class="lock-icon">
+        <span class="material-icons-outlined">lock</span>
+      </div>
+      <h1>Espelico Family Trip</h1>
+      <p>Enter password to access travel documents</p>
+      <form onsubmit="return checkPassword(event)">
+        <input type="password" id="password-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="unlock-btn">
+          <span class="material-icons-outlined">lock_open</span>
+          Unlock
+        </button>
+      </form>
+      <p class="lock-error" id="lock-error"></p>
+    </div>
   </div>
-  
-  <header class="header">
+
+  <div class="app-content" id="app-content" style="display: none;">
+    <div class="offline-indicator" id="offline-indicator">
+      <span class="material-icons-outlined">cloud_off</span>
+      Offline Mode
+    </div>
+    
+    <header class="header">
     <div class="header-content">
       <div class="logo">
         <span class="material-icons-outlined">flight_takeoff</span>
@@ -237,5 +257,6 @@
   </footer>
 
   <script src="app.js"></script>
+  </div>
 </body>
 </html>

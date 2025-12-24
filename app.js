@@ -1,5 +1,43 @@
 let content = null;
 
+// Password Protection
+const VALID_PASSWORDS = ['espelico', 'admin'];
+
+function checkPassword(event) {
+  event.preventDefault();
+  const input = document.getElementById('password-input');
+  const error = document.getElementById('lock-error');
+  const password = input.value.toLowerCase().trim();
+  
+  if (VALID_PASSWORDS.includes(password)) {
+    unlockApp();
+    return false;
+  } else {
+    error.textContent = 'Incorrect password. Please try again.';
+    input.value = '';
+    input.focus();
+    return false;
+  }
+}
+
+function unlockApp() {
+  const lockScreen = document.getElementById('lock-screen');
+  const appContent = document.getElementById('app-content');
+  
+  lockScreen.classList.add('hidden');
+  appContent.style.display = 'block';
+  sessionStorage.setItem('unlocked', 'true');
+}
+
+function checkAuth() {
+  if (sessionStorage.getItem('unlocked') === 'true') {
+    unlockApp();
+  }
+}
+
+// Run auth check on page load
+document.addEventListener('DOMContentLoaded', checkAuth);
+
 async function init() {
   try {
     const response = await fetch('content.json');
