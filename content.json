@@ -5,8 +5,7 @@
     "countries": ["Vietnam", "Cambodia"],
     "departure": "Philippines",
     "dates": {
-      "outbound": "December 24, 2025",
-      "return": "January 22, 2026"
+      "outbound": "December 24, 2025"
     },
     "note": "This page compiles travel documents for immigration and airline verification."
   },
