@@ -530,8 +530,89 @@ function getInitials(name) {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(console.error);
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('Service Worker registered');
+    }).catch(console.error);
+  });
+  
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data === 'CACHE_COMPLETE') {
+      const btn = document.getElementById('save-offline-btn');
+      const status = document.getElementById('offline-status');
+      const text = document.getElementById('save-offline-text');
+      
+      btn.disabled = false;
+      btn.classList.add('saved');
+      text.textContent = 'Saved Offline ✓';
+      status.textContent = 'All documents saved! You can now use this site without internet.';
+      status.classList.remove('error');
+      
+      localStorage.setItem('offlineSaved', 'true');
+    }
   });
 }
 
-document.addEventListener('DOMContentLoaded', init);
+function saveOffline() {
+  const btn = document.getElementById('save-offline-btn');
+  const status = document.getElementById('offline-status');
+  const text = document.getElementById('save-offline-text');
+  
+  if (!('serviceWorker' in navigator)) {
+    status.textContent = 'Offline saving not supported in this browser.';
+    status.classList.add('error');
+    return;
+  }
+  
+  btn.disabled = true;
+  text.textContent = 'Saving...';
+  status.textContent = 'Downloading all documents for offline use...';
+  
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage('CACHE_ALL');
+  } else {
+    navigator.serviceWorker.ready.then(reg => {
+      if (reg.active) {
+        reg.active.postMessage('CACHE_ALL');
+      }
+    });
+  }
+  
+  setTimeout(() => {
+    if (text.textContent === 'Saving...') {
+      btn.disabled = false;
+      btn.classList.add('saved');
+      text.textContent = 'Saved Offline ✓';
+      status.textContent = 'All documents saved! You can now use this site without internet.';
+      localStorage.setItem('offlineSaved', 'true');
+    }
+  }, 5000);
+}
+
+function checkOfflineStatus() {
+  const indicator = document.getElementById('offline-indicator');
+  if (!navigator.onLine && indicator) {
+    indicator.classList.add('show');
+  }
+  
+  window.addEventListener('online', () => {
+    if (indicator) indicator.classList.remove('show');
+  });
+  
+  window.addEventListener('offline', () => {
+    if (indicator) indicator.classList.add('show');
+  });
+  
+  if (localStorage.getItem('offlineSaved') === 'true') {
+    const btn = document.getElementById('save-offline-btn');
+    const text = document.getElementById('save-offline-text');
+    if (btn && text) {
+      btn.classList.add('saved');
+      text.textContent = 'Saved Offline ✓';
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  checkOfflineStatus();
+});

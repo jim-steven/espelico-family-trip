@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="offline-indicator" id="offline-indicator">
+    <span class="material-icons-outlined">cloud_off</span>
+    Offline Mode
+  </div>
+  
   <header class="header">
     <div class="header-content">
       <div class="logo">
@@ -204,10 +209,11 @@
   <footer class="footer">
     <p>Espelico Family Travel Documents</p>
     <p class="footer-note">For immigration and airline verification purposes</p>
-    <button class="print-btn" onclick="window.open('print.html', '_blank')">
-      <span class="material-icons-outlined">print</span>
-      Print All Documents
+    <button class="save-offline-btn" id="save-offline-btn" onclick="saveOffline()">
+      <span class="material-icons-outlined">download_for_offline</span>
+      <span id="save-offline-text">Save for Offline</span>
     </button>
+    <div class="offline-status" id="offline-status"></div>
   </footer>
 
   <script src="app.js"></script>

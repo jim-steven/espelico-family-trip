@@ -106,7 +106,7 @@
       "guests": 5,
       "confirmationCode": "HMEY4XH294",
       "platform": "Airbnb",
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600",
+      "image": "images/vinhomes.jpg",
       "mapUrl": "https://maps.google.com/?q=Vinhomes+Central+Park+Ho+Chi+Minh"
     },
     {
@@ -121,7 +121,7 @@
       "checkIn": "December 28, 2025",
       "checkOut": "January 10, 2026",
       "notes": "Primary stay in Cambodia",
-      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
+      "image": "images/garden-residency.jpg",
       "mapUrl": "https://maps.google.com/?q=The+Garden+Residency+Phnom+Penh"
     },
     {
@@ -134,7 +134,7 @@
       "checkIn": "December 31, 2025",
       "checkOut": "January 1, 2026",
       "notes": "One night stay for New Year's Eve",
-      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600",
+      "image": "images/urban-village.jpg",
       "mapUrl": "https://maps.google.com/?q=Urban+Village+Phnom+Penh"
     }
   ],
@@ -186,7 +186,7 @@
         "icon": "store",
         "files": [
           { "name": "Barangay Business Permit", "type": "image", "description": "Deane's sari-sari store permit", "file": "docs/business-permit-deane.jpg" },
-          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store", "file": "https://share.google/0X18VfdiD1NARRJCP" }
+          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store", "file": "docs/store-photo.jpg" }
         ]
       },
       {
@@ -195,7 +195,7 @@
         "files": [
           { "name": "Flight Booking KLWNKQ", "type": "pdf", "description": "Deane's flight confirmation", "file": "docs/flight-klwnkq.pdf" },
           { "name": "Flight Booking HKGUPT", "type": "pdf", "description": "Jim & Esmeralda's flight confirmation", "file": "docs/flight-hkgupt.pdf" },
-          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking under Heather Espelico (sister)", "file": "https://www.airbnb.co.uk/trips/shared/db49c252-47aa-4173-86e5-cd19a4bed9a6?viralityEntryPoint=165&s=76&principal_token=6c3f38a7-1ba8-409d-8ccb-9262756824d7&confCode=HMEY4XH294" },
+          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking under Heather Espelico (sister) - Code: HMEY4XH294", "file": "docs/vinhomes-airbnb.pdf" },
           { "name": "Garden Residency Confirmation", "type": "pdf", "description": "Hotel booking", "file": null },
           { "name": "Itinerary PDF", "type": "pdf", "description": "Complete trip itinerary", "file": null }
         ]
