@@ -811,15 +811,26 @@ body {
 }
 
 .document-item.no-file {
-  opacity: 0.6;
+  opacity: 0.5;
+  background: var(--color-bg);
 }
 
 .document-item.has-file {
-  border-left: 3px solid var(--color-accent);
+  border-left: 4px solid var(--color-accent);
+  background: #f0fff4;
 }
 
 a.doc-btn {
   text-decoration: none;
+}
+
+.document-item.has-file a.doc-btn.view-btn {
+  background: var(--color-accent);
+  color: white;
+}
+
+.document-item.has-file a.doc-btn.view-btn:hover {
+  background: #2f855a;
 }
 
 /* Funds Section */

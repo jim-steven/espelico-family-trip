@@ -183,10 +183,10 @@ function renderDocuments() {
             </div>
             <div class="document-actions">
               ${file.file ? `
-                <a href="${file.file}" target="_blank" class="doc-btn" title="View">
+                <a href="${file.file}" target="_blank" rel="noopener" class="doc-btn view-btn" title="View">
                   <span class="material-icons-outlined">visibility</span>
                 </a>
-                <a href="${file.file}" download class="doc-btn" title="Download">
+                <a href="${file.file}" target="_blank" rel="noopener" class="doc-btn" title="Download">
                   <span class="material-icons-outlined">download</span>
                 </a>
               ` : `
