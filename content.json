@@ -19,8 +19,8 @@
       "documents": ["passport", "coe", "payroll", "etravel"]
     },
     {
-      "id": "esmeralda",
-      "name": "Esmeralda Espelico",
+      "id": "mom",
+      "name": "Mom (Esmeralda Espelico)",
       "role": "Traveler",
       "employment": "Staff and Teacher in the Philippines",
       "documents": ["passport", "school-photo", "etravel"]
@@ -64,7 +64,8 @@
       },
       {
         "reference": "HKGUPT",
-        "passengers": ["Jim Steven Espelico", "Esmeralda Espelico"],
+        "passengers": ["Jim Steven Espelico", "Mom (Esmeralda Espelico)"],
+        "returnNote": "Returning Jan 11 due to work obligations - Jim's agency did not approve 3-week leave, and Mom must return for school duties week of Jan 12",
         "segments": [
           {
             "type": "outbound",
@@ -194,7 +195,7 @@
         "files": [
           { "name": "Flight Booking KLWNKQ", "type": "pdf", "description": "Deane's flight confirmation", "file": "docs/flight-klwnkq.pdf" },
           { "name": "Flight Booking HKGUPT", "type": "pdf", "description": "Jim & Esmeralda's flight confirmation", "file": "docs/flight-hkgupt.pdf" },
-          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking", "file": null },
+          { "name": "Vinhomes Confirmation", "type": "pdf", "description": "Airbnb booking under Heather Espelico (sister)", "file": "https://www.airbnb.co.uk/trips/shared/db49c252-47aa-4173-86e5-cd19a4bed9a6?viralityEntryPoint=165&s=76&principal_token=6c3f38a7-1ba8-409d-8ccb-9262756824d7&confCode=HMEY4XH294" },
           { "name": "Garden Residency Confirmation", "type": "pdf", "description": "Hotel booking", "file": null },
           { "name": "Itinerary PDF", "type": "pdf", "description": "Complete trip itinerary", "file": null }
         ]
@@ -218,11 +219,11 @@
       "notes": "Approved leave dates for travel period"
     },
     {
-      "traveler": "Esmeralda Espelico",
+      "traveler": "Mom (Esmeralda Espelico)",
       "status": "Employed",
       "description": "Staff and Teacher in the Philippines",
       "documents": ["School Christmas Party Photo"],
-      "notes": "Recent photo from school Christmas party demonstrates active employment and ties to the Philippines"
+      "notes": "Recent photo from school Christmas party demonstrates active employment and ties to the Philippines. Must return by Jan 11 to resume school duties week of Jan 12."
     },
     {
       "traveler": "Jose Deane Espelico",
@@ -240,8 +241,8 @@
   "returnAssurance": {
     "statement": "All travelers have confirmed return flights to the Philippines.",
     "returnFlights": [
-      { "traveler": "Jim Steven Espelico", "date": "January 11, 2026", "flight": "5J752" },
-      { "traveler": "Esmeralda Espelico", "date": "January 11, 2026", "flight": "5J752" },
+      { "traveler": "Jim Steven Espelico", "date": "January 11, 2026", "flight": "5J752", "reason": "Agency did not approve 3-week leave" },
+      { "traveler": "Mom (Esmeralda Espelico)", "date": "January 11, 2026", "flight": "5J752", "reason": "Must return for school duties" },
       { "traveler": "Jose Deane Espelico", "date": "January 22, 2026", "flight": "5J752" }
     ],
     "ties": [
@@ -258,7 +259,7 @@
     },
     {
       "question": "How long will you be staying?",
-      "answer": "Jim and Esmeralda: December 24, 2025 to January 11, 2026 (18 days). Jose Deane: December 24, 2025 to January 22, 2026 (29 days)."
+      "answer": "Jim and Mom: December 24, 2025 to January 11, 2026 (18 days) - returning early due to work obligations. Jose Deane: December 24, 2025 to January 22, 2026 (29 days)."
     },
     {
       "question": "Where will you be staying?",

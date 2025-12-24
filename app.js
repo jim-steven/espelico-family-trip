@@ -80,6 +80,7 @@ function renderFlights() {
           ${booking.status}
         </div>
       </div>
+      ${booking.returnNote ? `<div class="booking-note"><span class="material-icons-outlined">info</span>${booking.returnNote}</div>` : ''}
       <div class="booking-passengers">
         <span class="material-icons-outlined">person</span>
         ${booking.passengers.join(', ')}
@@ -250,7 +251,7 @@ function renderReturnAssurance() {
       <div class="return-flight-item">
         <span class="material-icons-outlined">flight_land</span>
         <span class="name">${rf.traveler}</span>
-        <span class="date">${rf.date} • ${rf.flight}</span>
+        <span class="date">${rf.date} • ${rf.flight}${rf.reason ? ` <em>(${rf.reason})</em>` : ''}</span>
       </div>
     `).join('');
   }

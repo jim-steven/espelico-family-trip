@@ -386,6 +386,22 @@ body {
   border-radius: 20px;
 }
 
+.booking-note {
+  padding: 0.75rem 1.25rem;
+  background: #fffbeb;
+  border-bottom: 1px solid #fcd34d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #92400e;
+}
+
+.booking-note .material-icons-outlined {
+  font-size: 1.1rem;
+  color: #d97706;
+}
+
 .booking-passengers {
   padding: 1rem 1.25rem;
   background: var(--color-bg);
