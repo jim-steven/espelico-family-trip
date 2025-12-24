@@ -185,7 +185,7 @@
         "icon": "store",
         "files": [
           { "name": "Barangay Business Permit", "type": "image", "description": "Deane's sari-sari store permit", "file": "docs/business-permit-deane.jpg" },
-          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store", "file": null }
+          { "name": "Store Photo", "type": "image", "description": "Photo of the mini store", "file": "https://share.google/0X18VfdiD1NARRJCP" }
         ]
       },
       {
