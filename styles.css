@@ -1384,6 +1384,86 @@ a.doc-btn {
   color: #e53e3e;
 }
 
+/* Install Prompt */
+.install-prompt {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+  border: 1px solid #90cdf4;
+  border-radius: var(--radius-md);
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.install-prompt.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.install-prompt h3 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.install-prompt p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.install-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.install-ios, .install-android {
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.install-ios strong, .install-android strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.install-ios ol, .install-android ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.install-ios ol li, .install-android ol li {
+  margin-bottom: 0.25rem;
+}
+
+.install-done-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.install-done-btn:hover {
+  background: var(--color-primary-dark);
+}
+
 .offline-indicator {
   position: fixed;
   top: 70px;

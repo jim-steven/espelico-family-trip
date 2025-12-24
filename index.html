@@ -210,6 +210,30 @@
       <span id="save-offline-text">Save for Offline</span>
     </button>
     <div class="offline-status" id="offline-status"></div>
+    
+    <div class="install-prompt" id="install-prompt">
+      <h3>Add to Home Screen</h3>
+      <p>For best offline experience, add this site to your home screen:</p>
+      <div class="install-instructions">
+        <div class="install-ios" id="install-ios">
+          <strong>iPhone/iPad:</strong>
+          <ol>
+            <li>Tap <span class="material-icons-outlined" style="font-size: 1rem; vertical-align: middle;">ios_share</span> Share button</li>
+            <li>Scroll down, tap "Add to Home Screen"</li>
+            <li>Tap "Add"</li>
+          </ol>
+        </div>
+        <div class="install-android" id="install-android">
+          <strong>Android:</strong>
+          <ol>
+            <li>Tap <span class="material-icons-outlined" style="font-size: 1rem; vertical-align: middle;">more_vert</span> Menu (3 dots)</li>
+            <li>Tap "Add to Home Screen" or "Install App"</li>
+            <li>Tap "Add"</li>
+          </ol>
+        </div>
+      </div>
+      <button class="install-done-btn" onclick="hideInstallPrompt()">Got it!</button>
+    </div>
   </footer>
 
   <script src="app.js"></script>

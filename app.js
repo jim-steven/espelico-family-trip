@@ -613,8 +613,46 @@ function saveOffline() {
       text.textContent = 'Saved Offline ✓';
       status.textContent = 'All documents saved! You can now use this site without internet.';
       localStorage.setItem('offlineSaved', 'true');
+      showInstallPrompt();
     }
   }, 5000);
+}
+
+function showInstallPrompt() {
+  const prompt = document.getElementById('install-prompt');
+  const iosInstructions = document.getElementById('install-ios');
+  const androidInstructions = document.getElementById('install-android');
+  
+  if (prompt) {
+    // Detect platform and show relevant instructions
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    
+    // Don't show if already installed as app
+    if (isStandalone) {
+      return;
+    }
+    
+    if (iosInstructions && androidInstructions) {
+      if (isIOS) {
+        androidInstructions.style.display = 'none';
+      } else if (isAndroid) {
+        iosInstructions.style.display = 'none';
+      }
+      // On desktop, show both as reference
+    }
+    
+    prompt.classList.add('show');
+  }
+}
+
+function hideInstallPrompt() {
+  const prompt = document.getElementById('install-prompt');
+  if (prompt) {
+    prompt.classList.remove('show');
+    localStorage.setItem('installPromptDismissed', 'true');
+  }
 }
 
 function checkOfflineStatus() {
